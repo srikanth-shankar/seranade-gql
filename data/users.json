@@ -1,0 +1,47 @@
+[
+  {
+    "id": "emailId1",
+    "likes": [
+      "id1",
+      "id2",
+      "id5"
+    ]
+  },
+  {
+    "id": "emailId2",
+    "likes": [
+      "id1",
+      "id3",
+      "id6"
+    ]
+  },
+  {
+    "id": "emailId3",
+    "likes": [
+      "id6",
+      "id2",
+      "id5"
+    ]
+  },
+  {
+    "id": "email4",
+    "likes": [
+      "id1",
+      "id6"
+    ]
+  },
+  {
+    "id": "email5",
+    "likes": [
+      "id2",
+      "id6"
+    ]
+  },
+  {
+    "id": "email6",
+    "likes": [
+      "id1",
+      "id6"
+    ]
+  }
+]

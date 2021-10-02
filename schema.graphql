@@ -1,0 +1,22 @@
+type Query{
+    users: [User]
+}
+
+type Mutation{
+    signup(input: AddUserInput): ID
+}
+
+input AddUserInput {
+    id: ID!,
+    likes: [ID]
+}
+
+type Artist {
+    id: ID!,
+    name: String
+}
+
+type User {
+    id: ID,
+    likes: [Artist]
+}
