@@ -1,13 +1,21 @@
 const db = require('./db');
+const playlistService = require('./playlistService');
 
 const Query = {
     users: () => db.users.list()
 };
 
 const Mutation = {
-    signup: (root, {input}) => db.users.create(input)
+    signUp: (root, {input}) => db.users.create(input),
+    signIn: (root, {id}) => {
+        let user = db.users.get(id);
+        playlistService.refreshPlaylist(user, true);
+    },
+    signOut: (root, {id}) => {
+        let user = db.users.get(id);
+        playlistService.refreshPlaylist(user, false);
+    }
 }
-
 
 const User = {
     likes: (user) => {

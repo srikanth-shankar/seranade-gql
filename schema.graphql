@@ -1,9 +1,12 @@
 type Query{
-    users: [User]
+    users: [User],
+    
 }
 
 type Mutation{
-    signup(input: AddUserInput): ID
+    signUp(input: AddUserInput): ID,
+    signIn(id: ID!): Boolean,
+    signOut(id: ID!): Boolean
 }
 
 input AddUserInput {
@@ -19,4 +22,9 @@ type Artist {
 type User {
     id: ID,
     likes: [Artist]
+}
+
+type Playlist {
+    artId: ID,
+    userIds: [ID]
 }
